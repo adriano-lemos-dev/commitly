@@ -19,8 +19,19 @@
     "npm",
     "npx"
   ],
-  "author": "Adriano Lemos <adriano.lemos.dev@gmail.com>",
+  "author": {
+    "name": "Adriano Lemos",
+    "email": "adriano.lemos.dev@gmail.com",
+    "url": "https://adrianolemos.dev"
+  },
+  "repository": {
+    "url": "https://github.com/adriano-lemos-dev/commitly"
+  },
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adriano-lemos-dev/commitly/issues"
+  },
+  "homepage": "https://github.com/adriano-lemos-dev/commitly/#readme",
   "dependencies": {
     "chalk": "^4.1.0",
     "esm": "^3.2.25",
