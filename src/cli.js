@@ -7,8 +7,6 @@ import { exit } from 'process';
 import chalk from 'chalk';
 
 export async function cli(argsArray) {
-  console.log(minimist(argsArray.slice(2)));
-
   if (!fs.existsSync('.git')) {
     console.error(
       `${chalk.redBright(
