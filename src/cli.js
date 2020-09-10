@@ -1,7 +1,7 @@
 import minimist from 'minimist';
 import { help } from './help';
 import { version } from './version';
-import { feat } from './feat';
+import { commit } from './commit';
 import fs from 'fs';
 import { exit } from 'process';
 import util from 'util';
@@ -57,14 +57,14 @@ export async function cli(argsArray) {
       help(args);
       break;
 
-    case 'feat':
+    case 'feat' || 'docs' || 'fix':
       if (!args.m) {
         console.log(
           '[commitly] – Opção "-m <string>" é obrigatória com o comando "feat".'
         );
         break;
       }
-      feat(args.m);
+      commit(cmd, args.m, args.d);
       break;
 
     default:
