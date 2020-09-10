@@ -7,6 +7,5 @@ export async function feat(mensagem) {
       return;
     }
     console.log(`stdout: ${stdout}`);
-    console.error(`stderr: ${stderr}`);
   });
 }
