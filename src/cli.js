@@ -4,9 +4,13 @@ import { version } from './version';
 import { feat } from './feat';
 import fs from 'fs';
 import { exit } from 'process';
+import util from 'util';
+import { exec } from 'child_process';
 import chalk from 'chalk';
 
-export async function cli(argsArray) {
+const execp = util.promisify(exec);
+
+function checksForGitRepo() {
   if (!fs.existsSync('.git')) {
     console.error(
       `${chalk.redBright(
@@ -15,6 +19,23 @@ export async function cli(argsArray) {
     );
     exit(1);
   }
+}
+
+async function checksForGitInstallation() {
+  const { stdout } = await execp('whereis git');
+  if (stdout === '') {
+    console.error(
+      `${chalk.redBright(
+        '[commitly]'
+      )} – É necessário ter o git instalado na máquina. ⚠️`
+    );
+    exit(1);
+  }
+}
+
+export async function cli(argsArray) {
+  await checksForGitInstallation();
+  checksForGitRepo();
 
   const args = minimist(argsArray.slice(2));
   let cmd = args._[0] || 'help';
