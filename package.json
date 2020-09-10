@@ -9,9 +9,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "CLI",
+    "Node",
+    "git",
+    "commit",
+    "chalk",
+    "minimist",
+    "npm",
+    "npx"
+  ],
+  "author": "Adriano Lemos <adriano.lemos.dev@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.0",
     "esm": "^3.2.25",
