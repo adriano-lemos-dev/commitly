@@ -1,4 +1,4 @@
-# COMMITLY – CLI de apoio a escrita de mensagens de _commit_
+# COMMITLY
 
 Um CLI simples para auxiliar na escrita de mensagens de _commit_ seguindo as convenções do projeto Angular.
 
