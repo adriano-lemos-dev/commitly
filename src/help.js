@@ -4,6 +4,8 @@ const menus = {
   main: `
     ${chalk.greenBright('cmtly [comando] <opções>')}
 
+    ${chalk.underline(chalk.yellow('Comandos:'))}
+
     ${chalk.blueBright(
       'feat'
     )} .......... Auxilia na criação de uma mensagem de commit para um nova funcionalidade
@@ -15,6 +17,18 @@ const menus = {
     )} ........... Auxilia na criação de uma mensagem de commit para uma correção
     ${chalk.blueBright('version')} ....... Exibe a versão atual do commitly
     ${chalk.blueBright('help')} .......... Exibe essa mensagem de ajuda
+
+    ${chalk.underline(chalk.yellow('Opções:'))}
+
+    ${chalk.blueBright('-h --help')} ......... Equivalente ao comando "help"
+    ${chalk.blueBright('-v --version')} ...... Equivalente ao comando "version"
+    ${chalk.blueBright(
+      '-m'
+    )} ................ Precede a mensagem principal do commit cercada por aspas duplas ("")
+    ${chalk.blueBright(
+      '-d'
+    )} ................ Precede a mensagem de detalhamento do commit cercada por aspas duplas ("")
+    
   `,
   feat: `
     ${chalk.blueBright(

@@ -57,7 +57,9 @@ export async function cli(argsArray) {
       help(args);
       break;
 
-    case 'feat' || 'docs' || 'fix':
+    case 'feat':
+    case 'docs':
+    case 'fix':
       if (!args.m) {
         console.log(
           '[commitly] – Opção "-m <string>" é obrigatória com o comando "feat".'
