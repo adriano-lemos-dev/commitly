@@ -4,6 +4,8 @@ const menus = {
   main: `
     ${chalk.greenBright('cmtly [comando] <opções>')}
 
+    ${chalk.greenBright('Sem parâmetro algum o modo interativo é acionado!')}
+
     ${chalk.underline(chalk.yellow('Comandos:'))}
 
     ${chalk.blueBright(

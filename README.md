@@ -27,6 +27,8 @@ Veja a própria ajuda do `commitly`:
 ```
     cmtly [comando] <opções>
 
+    Sem parâmetro algum o modo interativo é acionado!
+
     Comandos:
 
     feat .......... Auxilia na criação de uma mensagem de commit para um nova funcionalidade
