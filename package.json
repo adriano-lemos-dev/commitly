@@ -1,6 +1,6 @@
 {
   "name": "commitly",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Um CLI para auxiliar na criação de commits melhores",
   "bin": {
     "cmtly": "./index.js"
