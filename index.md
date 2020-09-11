@@ -1,37 +1,46 @@
-## Welcome to GitHub Pages
+# COMMITLY
 
-You can use the [editor on GitHub](https://github.com/adriano-lemos-dev/commitly/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Um CLI simples para auxiliar na escrita de mensagens de _commit_ seguindo as convenções do projeto Angular.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Uso
 
-### Markdown
+Como é uma CLI escrita em JavaScript (Node), há a opção de instalar globalmente:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+```shell
+npm i -g commitly
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+cmtly --help
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Ou executar sem instalar usando o `npx`:
 
-### Jekyll Themes
+```shell
+npx -p commitly cmtly --help
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/adriano-lemos-dev/commitly/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Comandos e Opções
 
-### Support or Contact
+Seguindo a [convenção de mensagens de _commit_ do time do Angular](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit). Desta forma, esse utilitário possui comandos para registrar mensagens usando os prefixos mais conhecidos dessa convenção.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Veja a própria ajuda do `commitly`:
+
+```
+    cmtly [comando] <opções>
+
+    Sem parâmetro algum o modo interativo é acionado!
+
+    Comandos:
+
+    feat .......... Auxilia na criação de uma mensagem de commit para um nova funcionalidade
+    docs .......... Auxilia na criação de uma mensagem de commit de uma documentação
+    fix ........... Auxilia na criação de uma mensagem de commit para uma correção
+    version ....... Exibe a versão atual do commitly
+    help .......... Exibe essa mensagem de ajuda
+
+    Opções:
+
+    -h --help ......... Equivalente ao comando "help"
+    -v --version ...... Equivalente ao comando "version"
+    -m ................ Precede a mensagem principal do commit cercada por aspas duplas ("")
+    -d ................ Precede a mensagem de detalhamento do commit cercada por aspas duplas ("")
+```
