@@ -8,6 +8,8 @@ import util from 'util';
 import { exec } from 'child_process';
 import chalk from 'chalk';
 
+import { questioning } from './interactive';
+
 const execp = util.promisify(exec);
 
 function checksForGitRepo() {
@@ -38,7 +40,7 @@ export async function cli(argsArray) {
   checksForGitRepo();
 
   const args = minimist(argsArray.slice(2));
-  let cmd = args._[0] || 'help';
+  let cmd = args._[0] || 'interactive';
 
   if (args.version || args.v) {
     cmd = 'version';
@@ -49,6 +51,10 @@ export async function cli(argsArray) {
   }
 
   switch (cmd) {
+    case 'interactive':
+      questioning();
+      break;
+
     case 'version':
       version(args);
       break;
