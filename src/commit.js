@@ -13,5 +13,4 @@ export async function commit(tipo = 'feat', mensagem, detalhe) {
     console.error(`exec error: ${error}`);
     return;
   }
-  console.log(`stdout: ${stdout}`);
 }
